@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+.name {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  margin: 10px;
+}
+
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  padding: 20px;
+  color: rgb(77, 82, 93);
+}
+
+.button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(113, 184, 5);
+  border: solid 3px white;
+  border-radius: 0.35em;
+  margin-left: 30px;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  color: black;
+}

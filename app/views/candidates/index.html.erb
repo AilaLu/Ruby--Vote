@@ -1,0 +1,22 @@
+<%= flash[:notice] %>
+
+<!-- 主頁面 -->
+<h1>Vote</h1>
+
+<a class="button" href="/candidates/new">Add Candidate</a>
+<!-- 用link_to可以用prefix的路徑！<%=link_to 'Add Candidate', new_candidate_path %> -->
+
+<table class="label">
+  <tr>
+    <td>Name</td>
+    <td>Party</td>
+  </tr>
+
+  <% @candidates.each do |candidate| %>
+  <tr>
+    <td><%= link_to candidate.name, candidate_path(candidate.id) %></td>
+    <td><%= candidate.party %></td>
+  </tr>
+
+  <% end %>
+</table>
