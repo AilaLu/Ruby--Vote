@@ -18,12 +18,21 @@
   font-size: 30px;
   margin: 10px;
   padding-left: 20px;
+  font-weight: 900;
+  color: black;
 }
 
 .label {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 30px;
+  padding: 10px 20px;
   margin: 10px;
+  margin-left: 40px;
+}
+
+.column {
+  margin-top: 30px;
+  font-weight: bold;
+  color: rgb(77, 82, 93);
 }
 
 h1 {
@@ -38,14 +47,56 @@ h1 {
   background-color: rgb(113, 184, 5);
   border: solid 3px white;
   border-radius: 0.35em;
-  margin-left: 30px;
+  margin-left: 50px;
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+  width: fit-content;
+}
+
+.button a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   padding: 10px;
   color: white;
 }
 
-a {
+.error_message {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: red;
   font-weight: 900;
-  color: black;
+}
+
+.add_success {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(113, 184, 5);
+  font-weight: 900;
+}
+
+input[type="text"] {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: solid 3px lightgray;
+  border-radius: 0.35em;
+  margin-left: 30px;
+  padding: 10px;
+}
+
+textarea {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: solid 3px lightgray;
+  border-radius: 0.35em;
+  margin-left: 30px;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(113, 184, 5);
+  border: solid 3px white;
+  border-radius: 0.35em;
+  margin-left: 50px;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
 }

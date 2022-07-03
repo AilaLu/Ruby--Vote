@@ -1,4 +1,4 @@
-<%= flash[:notice] %>
+<div class="add_success"><%= flash[:notice] %></div>
 
 <!-- 主頁面 -->
 <h1>Vote</h1>
@@ -8,14 +8,22 @@
 
 <table class="label">
   <tr>
-    <td>Name</td>
-    <td>Party</td>
+    <td class="column">Name</td>
+    <td class="column">Party</td>
+    <!-- <td>Edit</td>
+    <td>Delete</td> -->
   </tr>
 
   <% @candidates.each do |candidate| %>
   <tr>
     <td><%= link_to candidate.name, candidate_path(candidate.id) %></td>
     <td><%= candidate.party %></td>
+    <td class="button">
+      <%= link_to 'Edit', edit_candidate_path(candidate.id) %>
+    </td>
+    <td class="button">
+      <%= link_to 'Delete', candidate_path(candidate.id), method: 'delete' %>
+    </td>
   </tr>
 
   <% end %>

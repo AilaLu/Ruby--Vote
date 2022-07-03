@@ -1,5 +1,4 @@
-<!-- 主頁面來到這裡可以新增候選人 -->
-<h1>Add Candidate</h1>
+<h1>Edit Candidate</h1>
 
 <!-- 如果有欄位沒有填 就會跑底下的迴圈 一一印出錯誤的訊息 -->
 <% if @candidate.errors.any? %>
@@ -19,5 +18,3 @@
   <%= form.label :politics %> <%= form.text_area :politics %>
 </div>
 <%= form.submit %> <% end %>
-
-<div class="button"><%= link_to 'Go back to Vote', candidates_path %></div>
