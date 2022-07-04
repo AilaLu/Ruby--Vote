@@ -45,7 +45,16 @@ class CandidatesController < ApplicationController
 
     end
 
+    def vote
+        @candidate = Candidate.find_by(id: params[:id])
 
+        @candidate.vote_logs.create(ip_address: request.remote_ip)
+
+        # @candidate.votes = @candidate.votes + 1
+        # @candidate.save
+        flash[:notice] = "Voted!"
+        redirect_to '/candidates'
+    end
     private 
     # 只要叫的是這個method, 資料就被確認過了 不會被Attribute error擋下來
     def clean_params

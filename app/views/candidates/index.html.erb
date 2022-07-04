@@ -8,6 +8,8 @@
 
 <table class="label">
   <tr>
+    <td></td>
+    <td class="column">Votes</td>
     <td class="column">Name</td>
     <td class="column">Party</td>
     <!-- <td>Edit</td>
@@ -16,6 +18,10 @@
 
   <% @candidates.each do |candidate| %>
   <tr>
+    <td class="button">
+      <%= link_to 'Vote', vote_candidate_path(candidate.id), method: 'post'%>
+    </td>
+    <td><%= candidate.vote_logs.count %></td>
     <td><%= link_to candidate.name, candidate_path(candidate.id) %></td>
     <td><%= candidate.party %></td>
     <td class="button">
