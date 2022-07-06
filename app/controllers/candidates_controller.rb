@@ -11,8 +11,7 @@ class CandidatesController < ApplicationController
         @candidate = Candidate.new(clean_params)
         #debugger 在這邊放一個debugger測試的時候 在terminal就可以看到byebug, 在那邊打params[:candidate]就可以看到剛剛在new表單裡送出的資料 打continue就可以離開debugger
         if @candidate.save
-            flash[:notice] = "Candidate created!"
-            redirect_to '/candidates'
+            redirect_to '/candidates', notice: "Candidate created!" 
         else 
             render :new #在candidate.rb裡validate名字一定要填, 所以沒有填寫的話會到這個else，render :new會回到原本頁面 但是保有已經填好的欄位
             
@@ -31,8 +30,7 @@ class CandidatesController < ApplicationController
         @candidate = Candidate.find_by(id: params[:id])
          #debugger 在這邊放一個debugger測試的時候 在terminal就可以看到byebug, 在那邊打params[:candidate]就可以看到剛剛在new表單裡送出的資料 打continue就可以離開debugger
         if @candidate.update(clean_params)
-            flash[:notice] = "Candidate updated!"
-            redirect_to '/candidates'
+            redirect_to '/candidates', notice: "Candidate updated!"
         else 
             render :edit #在candidate.rb裡validate名字一定要填, 所以沒有填寫的話會到這個else，render :new會回到原本頁面 但是保有已經填好的欄位
         end
@@ -40,8 +38,7 @@ class CandidatesController < ApplicationController
     def destroy
         @candidate = Candidate.find_by(id: params[:id])
         @candidate.destroy
-        flash[:notice] = "Candidate deleted!"
-            redirect_to '/candidates'
+            redirect_to '/candidates', notice: "Candidate deleted!"
 
     end
 
@@ -52,8 +49,7 @@ class CandidatesController < ApplicationController
 
         # @candidate.votes = @candidate.votes + 1
         # @candidate.save
-        flash[:notice] = "Voted!"
-        redirect_to '/candidates'
+        redirect_to '/candidates', notice: "Voted!"
     end
     private 
     # 只要叫的是這個method, 資料就被確認過了 不會被Attribute error擋下來
